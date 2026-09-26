@@ -1,9 +1,9 @@
-#include <DHT.h>
+#include <DHTesp.h>
 
 // =========================
 // FarmTech Solutions - Fase 2
 // ESP32 + Wokwi
-// Cultura: Cafe arábica
+// Cultura: Cafe arabica
 // =========================
 
 #define PIN_N 18
@@ -13,13 +13,11 @@
 #define PIN_DHT 15
 #define PIN_RELE 23
 
-#define DHTTYPE DHT22
-
 const float PH_MIN = 5.5;
 const float PH_MAX = 6.0;
 const float UMIDADE_LIMITE = 50.0;
 
-DHT dht(PIN_DHT, DHTTYPE);
+DHTesp dht;
 
 // Resultado do programa Python/API.
 // false = sem chuva prevista; true = chuva prevista.
@@ -29,8 +27,8 @@ unsigned long ultimaLeitura = 0;
 const unsigned long INTERVALO_LEITURA = 2500;
 
 float converterLdrParaPh(int valorAnalogico) {
-  // Conversão DIDÁTICA solicitada pela atividade.
-  // O LDR mede luz, não pH.
+  // Conversao DIDATICA solicitada pela atividade.
+  // O LDR mede luz, nao pH.
   return (valorAnalogico / 4095.0) * 14.0;
 }
 
@@ -72,7 +70,8 @@ void setup() {
 
   digitalWrite(PIN_RELE, LOW);
 
-  dht.begin();
+  // Biblioteca recomendada pelo Wokwi para DHT22 + ESP32.
+  dht.setup(PIN_DHT, DHTesp::DHT22);
 
   Serial.println();
   Serial.println("========================================");
@@ -101,9 +100,11 @@ void loop() {
   int valorLdr = analogRead(PIN_LDR);
   float phSimulado = converterLdrParaPh(valorLdr);
 
-  float umidade = dht.readHumidity();
-  float temperatura = dht.readTemperature();
+  TempAndHumidity dadosDht = dht.getTempAndHumidity();
+  float umidade = dadosDht.humidity;
+  float temperatura = dadosDht.temperature;
 
+  // Em caso de falha do sensor, a bomba e mantida desligada por seguranca.
   if (isnan(umidade) || isnan(temperatura)) {
     Serial.println("ERRO: nao foi possivel ler o DHT22.");
     digitalWrite(PIN_RELE, LOW);
@@ -153,13 +154,13 @@ void loop() {
   Serial.println();
   Serial.println("DECISAO DE IRRIGACAO");
   if (irrigar) {
-    Serial.println("RELÉ: ON -> BOMBA LIGADA");
+    Serial.println("RELE: ON -> BOMBA LIGADA");
     Serial.println("Motivo: umidade abaixo de 50% e sem chuva prevista.");
   } else if (chuvaPrevista && soloSeco) {
-    Serial.println("RELÉ: OFF -> BOMBA DESLIGADA");
+    Serial.println("RELE: OFF -> BOMBA DESLIGADA");
     Serial.println("Motivo: umidade baixa, mas existe chuva prevista.");
   } else {
-    Serial.println("RELÉ: OFF -> BOMBA DESLIGADA");
+    Serial.println("RELE: OFF -> BOMBA DESLIGADA");
     Serial.println("Motivo: umidade igual ou superior a 50%.");
   }
 }
