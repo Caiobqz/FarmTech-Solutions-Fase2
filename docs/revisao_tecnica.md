@@ -1,0 +1,74 @@
+# Revisão técnica — Fase 2
+
+Revisão realizada após a entrada do circuito ESP32/Wokwi e do opcional Python no repositório.
+
+## O que já está implementado
+
+- circuito definido em `esp32/diagram.json`;
+- código C/C++ em `esp32/sketch.ino`;
+- botões N, P e K;
+- LDR para pH simulado;
+- DHT22 para umidade simulada;
+- relé como bomba;
+- comandos `CHUVA=SIM`, `CHUVA=NAO` e `STATUS`;
+- lógica de irrigação baseada em umidade e previsão de chuva;
+- API Open-Meteo em `python/clima_api.py`;
+- documentação de pesquisa, lógica e testes.
+
+## Ajustes técnicos já realizados
+
+### DHT22 no ESP32
+
+O código foi alinhado à biblioteca `DHT sensor library for ESPx`, indicada no projeto para uso com ESP32/Wokwi.
+
+Agora:
+
+```cpp
+#include <DHTesp.h>
+```
+
+e `esp32/libraries.txt` contém somente a biblioteca necessária.
+
+### API meteorológica
+
+`python/clima_api.py` passou a tratar:
+
+- timeout;
+- falha de conexão;
+- erro HTTP;
+- JSON inválido;
+- ausência de dados suficientes.
+
+Em caso de falha, o programa não gera automaticamente `CHUVA=SIM` ou `CHUVA=NAO`.
+
+## Validações que ainda precisam ser executadas no Wokwi
+
+- [ ] circuito compila sem erro;
+- [ ] botão N altera o estado;
+- [ ] botão P altera o estado;
+- [ ] botão K altera o estado;
+- [ ] LDR modifica o pH simulado;
+- [ ] DHT22 modifica a umidade;
+- [ ] umidade < 50% e sem chuva liga o relé;
+- [ ] umidade >= 50% mantém o relé desligado;
+- [ ] `CHUVA=SIM` impede irrigação com solo seco;
+- [ ] `CHUVA=NAO` permite irrigação com solo seco;
+- [ ] `STATUS` mostra a condição atual de chuva;
+- [ ] alertas de NPK e pH aparecem corretamente.
+
+## Entregáveis ainda pendentes
+
+- [ ] preencher resultados reais em `docs/roteiro_testes.md`;
+- [ ] adicionar `imagens/circuito-wokwi.png`;
+- [ ] adicionar `imagens/irrigacao-ligada.png`;
+- [ ] adicionar `imagens/irrigacao-desligada.png`;
+- [ ] inserir as imagens no README principal;
+- [ ] decidir se o grupo fará o opcional em R;
+- [ ] gravar vídeo de até 5 minutos;
+- [ ] publicar o vídeo como não listado;
+- [ ] adicionar o link do vídeo ao README;
+- [ ] revisão final antes da entrega.
+
+## Prioridade
+
+Nenhuma nova funcionalidade deve ser adicionada antes de validar o circuito atual. A próxima etapa é **teste funcional no Wokwi**.
