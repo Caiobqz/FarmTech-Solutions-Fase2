@@ -2,7 +2,7 @@
 
 Esta divisão serve para organizar o trabalho e pode ser alterada pelo grupo conforme disponibilidade e interesse.
 
-## Caio
+## Caio — rm576443
 
 - organizar o repositório;
 - acompanhar a integração entre as partes;
@@ -10,21 +10,21 @@ Esta divisão serve para organizar o trabalho e pode ser alterada pelo grupo con
 - revisar o README final;
 - conferir os testes antes da entrega.
 
-## Suellen
+## Juliana — rm579614
 
 - pesquisar necessidades do café;
 - registrar fontes de pH, umidade, NPK e irrigação;
 - ajudar a transformar a pesquisa em documentação clara;
 - revisar se os valores usados no projeto têm justificativa.
 
-## Paulo
+## Paulo — rm575580
 
 - montar o circuito no Wokwi;
 - identificar os pinos utilizados;
 - testar botões, LDR, DHT22 e relé;
 - salvar o `diagram.json` e as imagens do circuito.
 
-## Kauê
+## Kauê — rm576394
 
 - desenvolver o opcional de Python/API junto com o grupo;
 - ajudar a preparar os dados para análise;
