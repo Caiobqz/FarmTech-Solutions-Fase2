@@ -2,46 +2,38 @@
 
 ## Objetivo
 
-Consultar uma base meteorológica pública e transformar a previsão de chuva em uma variável simples para a lógica de irrigação do ESP32.
+Consultar uma API meteorológica pública e transformar a previsão de chuva em uma informação simples para a lógica de irrigação do ESP32.
 
-A API escolhida é a **Open-Meteo Weather Forecast API**, que disponibiliza previsão horária, incluindo probabilidade de precipitação e precipitação. A documentação oficial está em https://open-meteo.com/en/docs.
-
-## Por que Open-Meteo?
-
-- API pública;
-- não exige chave de API para este uso acadêmico;
-- possui previsão horária;
-- fornece `precipitation_probability` e `precipitation`;
-- permite consultar a localização por latitude e longitude.
+A API escolhida é a **Open-Meteo Weather Forecast API**.
 
 ## Critério utilizado
 
-O programa analisa as próximas 6 horas. A variável `chuva_prevista` será `True` quando pelo menos uma destas condições ocorrer:
+O programa analisa as próximas 6 horas. `chuva_prevista` será verdadeiro quando pelo menos uma destas condições ocorrer:
 
 - probabilidade máxima de precipitação >= 40%; ou
 - precipitação acumulada prevista >= 1,0 mm.
 
-Esses limites são **critérios didáticos definidos pelo grupo para a simulação**, e não uma recomendação agronômica universal.
+Esses limites são critérios didáticos definidos para a simulação, e não uma recomendação agronômica universal.
 
 ## Execução
 
-No terminal:
+Na raiz do repositório:
 
 ```bash
-python clima_api.py --latitude LATITUDE --longitude LONGITUDE
+python python/clima_api.py --latitude LATITUDE --longitude LONGITUDE
 ```
 
-Exemplo apenas para teste:
+Exemplo:
 
 ```bash
-python clima_api.py --latitude -23.5505 --longitude -46.6333
+python python/clima_api.py --latitude -19.9678 --longitude -44.1983
 ```
 
-Use as coordenadas da área que o grupo deseja representar como fazenda.
+O script utiliza apenas a biblioteca padrão do Python, portanto não exige instalação de pacote externo.
 
-## Integração com o ESP32/Wokwi
+## Saída
 
-No plano gratuito, a integração automática entre um Python local e o Monitor Serial do Wokwi não é necessária para cumprir o enunciado. O programa imprime um comando:
+Quando a consulta funciona, o programa mostra a previsão e gera:
 
 ```text
 CHUVA=SIM
@@ -55,13 +47,19 @@ CHUVA=NAO
 
 Esse comando pode ser copiado para o Monitor Serial do Wokwi.
 
-O ESP32 aceita também:
+## Falhas de conexão
 
-```text
-STATUS
-```
+O script trata:
 
-## Fluxo
+- timeout;
+- falha de conexão;
+- erro HTTP;
+- resposta JSON inválida;
+- ausência de dados suficientes de precipitação.
+
+Quando a consulta falha, nenhum comando `CHUVA=SIM/NAO` é gerado. Isso evita transformar uma falha de rede em uma decisão automática de irrigação.
+
+## Integração com o ESP32
 
 ```text
 Open-Meteo
@@ -79,4 +77,10 @@ ESP32
 Lógica de irrigação
     ↓
 Relé / bomba
+```
+
+O ESP32 também aceita:
+
+```text
+STATUS
 ```
