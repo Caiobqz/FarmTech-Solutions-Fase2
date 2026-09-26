@@ -4,10 +4,10 @@ Projeto acadêmico da FIAP para simulação de um sistema de irrigação intelig
 
 ## Integrantes
 
-- Caio Barros Queiroz
-- 
-- Paulo Vitor Isidoro Silva
-- Kauê Cavalcanti Araujo
+- Caio Barros Queiroz — `rm576443@fiap.com.br`
+- Paulo Vitor Isidoro Silva — `rm575580@fiap.com.br`
+- Kauê Cavalcanti Araujo — `rm576394@fiap.com.br`
+- Juliana — `rm579614@fiap.com.br`
 
 ## 1. Objetivo
 
