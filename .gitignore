@@ -1,20 +1,6 @@
-# Python
 __pycache__/
 *.pyc
 .venv/
 venv/
-
-# R
-.Rhistory
-.RData
-.Ruserdata
-
-# IDE / sistema
-.vscode/
-.idea/
+.env
 .DS_Store
-Thumbs.db
-
-# Arquivos temporários
-*.tmp
-*.log

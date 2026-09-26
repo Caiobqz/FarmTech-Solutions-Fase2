@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions - FIAP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp32", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "buttonN", "top": -20, "left": 300, "attrs": { "color": "green", "label": "N" } },
+    { "type": "wokwi-pushbutton", "id": "buttonP", "top": 70, "left": 300, "attrs": { "color": "green", "label": "P" } },
+    { "type": "wokwi-pushbutton", "id": "buttonK", "top": 160, "left": 300, "attrs": { "color": "green", "label": "K" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr", "top": 300, "left": 40, "attrs": { "lux": "400" } },
+    { "type": "wokwi-dht22", "id": "dht22", "top": 300, "left": 260, "attrs": { "temperature": "24", "humidity": "40" } },
+    { "type": "wokwi-relay-module", "id": "relay", "top": 300, "left": 470, "attrs": { "transistor": "npn" } }
+  ],
+  "connections": [
+    [ "esp32:18", "buttonN:1.r", "green", [] ],
+    [ "buttonN:2.r", "esp32:GND.1", "black", [] ],
+    [ "esp32:19", "buttonP:1.r", "green", [] ],
+    [ "buttonP:2.r", "esp32:GND.1", "black", [] ],
+    [ "esp32:21", "buttonK:1.r", "green", [] ],
+    [ "buttonK:2.r", "esp32:GND.1", "black", [] ],
+    [ "esp32:34", "ldr:AO", "orange", [] ],
+    [ "esp32:3V3", "ldr:VCC", "red", [] ],
+    [ "esp32:GND.2", "ldr:GND", "black", [] ],
+    [ "esp32:15", "dht22:SDA", "blue", [] ],
+    [ "esp32:3V3", "dht22:VCC", "red", [] ],
+    [ "esp32:GND.2", "dht22:GND", "black", [] ],
+    [ "esp32:23", "relay:IN", "purple", [] ],
+    [ "esp32:5V", "relay:VCC", "red", [] ],
+    [ "esp32:GND.2", "relay:GND", "black", [] ]
+  ],
+  "serialMonitor": { "display": "auto", "newline": "lf", "convertEol": true }
+}
