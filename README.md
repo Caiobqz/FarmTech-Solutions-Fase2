@@ -5,7 +5,7 @@ Projeto acadêmico da FIAP para simulação de um sistema de irrigação intelig
 ## Integrantes
 
 - Caio Barros Queiroz
-- Suellen Hellen Pereira Silva
+- 
 - Paulo Vitor Isidoro Silva
 - Kauê Cavalcanti Araujo
 
