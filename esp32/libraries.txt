@@ -1,2 +1,1 @@
 DHT sensor library for ESPx
-Adafruit Unified Sensor
