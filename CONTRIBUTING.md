@@ -25,7 +25,7 @@ Este repositório será desenvolvido em grupo. Para que o histórico do Git refl
 A divisão abaixo é apenas uma sugestão e pode ser ajustada pelo grupo:
 
 - Caio: organização, integração e apoio no ESP32;
-- Suellen: pesquisa da cultura e documentação;
+- Juliana: pesquisa da cultura e documentação;
 - Paulo: circuito Wokwi e sensores;
 - Kauê: Python/API e apoio na análise em R.
 
