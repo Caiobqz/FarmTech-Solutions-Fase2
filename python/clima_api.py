@@ -91,8 +91,11 @@ def consultar_previsao(latitude: float, longitude: float) -> dict:
         ) from erro
 
 
-def somente_numeros(valores: list) -> list[float]:
+def somente_numeros(valores: object) -> list[float]:
     """Remove valores nulos ou inesperados retornados pela API."""
+    if not isinstance(valores, list):
+        return []
+
     return [
         float(valor)
         for valor in valores
