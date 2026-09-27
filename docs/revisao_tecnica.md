@@ -41,6 +41,17 @@ e `esp32/libraries.txt` contém somente a biblioteca necessária.
 
 Em caso de falha, o programa não gera automaticamente `CHUVA=SIM` ou `CHUVA=NAO`.
 
+### Refatoração de legibilidade
+
+O código foi reorganizado sem alterar a regra de negócio:
+
+- `esp32/sketch.ino` foi dividido em funções menores para leitura de sensores, decisão de irrigação, controle do relé e mensagens do Monitor Serial;
+- as leituras do ESP32 passaram a ser agrupadas em `LeiturasSensores`;
+- pinos, limites e intervalo de leitura usam constantes nomeadas;
+- `python/clima_api.py` foi dividido em funções para argumentos, URL, consulta, análise e exibição;
+- latitude e longitude agora são validadas antes da consulta;
+- o comportamento em caso de falha da API permanece seguro: nenhum comando de chuva é gerado sem dado válido.
+
 ## Validações que ainda precisam ser executadas no Wokwi
 
 - [ ] circuito compila sem erro;
