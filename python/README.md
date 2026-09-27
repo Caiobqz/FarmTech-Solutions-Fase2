@@ -97,3 +97,14 @@ O script foi separado em funções para facilitar leitura e manutenção:
 - `exibir_resultado()` e `exibir_erro()` cuidam somente da saída.
 
 Latitude deve estar entre -90 e 90, e longitude entre -180 e 180.
+
+
+## Testes locais
+
+A lógica de decisão meteorológica pode ser testada sem acessar a internet:
+
+```bash
+python python/test_clima_api.py
+```
+
+Os testes cobrem ausência de chuva, limites de probabilidade/precipitação, valores nulos e respostas inválidas.
