@@ -84,3 +84,16 @@ O ESP32 também aceita:
 ```text
 STATUS
 ```
+
+
+## Organização do código
+
+O script foi separado em funções para facilitar leitura e manutenção:
+
+- `criar_argumentos()` lê e valida latitude/longitude;
+- `montar_url()` cria a consulta da API;
+- `consultar_previsao()` faz a requisição;
+- `analisar_chuva()` aplica os critérios de chuva;
+- `exibir_resultado()` e `exibir_erro()` cuidam somente da saída.
+
+Latitude deve estar entre -90 e 90, e longitude entre -180 e 180.
