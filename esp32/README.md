@@ -61,6 +61,18 @@ CHUVA=NAO
 STATUS
 ```
 
+## Organização do código
+
+O `sketch.ino` foi dividido em funções pequenas e com responsabilidade única:
+
+- `lerSensores()` concentra a coleta das entradas;
+- `deveIrrigar()` aplica a regra principal da bomba;
+- `atualizarRele()` controla a saída;
+- `processarComandoSerial()` trata os comandos meteorológicos;
+- `imprimirLeituras()`, `imprimirAlertas()` e `imprimirDecisao()` organizam a saída no Monitor Serial.
+
+As leituras são agrupadas em `LeiturasSensores`, evitando muitas variáveis soltas no `loop()`.
+
 ## Próxima etapa
 
-A implementação está pronta para validação no Wokwi. Ainda é necessário executar os cenários de `docs/roteiro_testes.md` e registrar os resultados reais antes da gravação do vídeo.
+A implementação está pronta para validação no Wokwi. Ainda é necessário confirmar compilação, comportamento do relé e todos os cenários de `docs/roteiro_testes.md` antes da gravação do vídeo.
