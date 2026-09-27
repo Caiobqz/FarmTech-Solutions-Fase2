@@ -190,6 +190,7 @@ FarmTech-Solutions-Fase2/
 │   └── README.md
 ├── python/
 │   ├── clima_api.py
+│   ├── test_clima_api.py
 │   ├── requirements.txt
 │   └── README.md
 ├── dados/
