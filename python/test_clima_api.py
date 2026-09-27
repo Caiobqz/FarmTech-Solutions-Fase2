@@ -63,6 +63,17 @@ class TestAnaliseChuva(unittest.TestCase):
         with self.assertRaises(ValueError):
             analisar_chuva({})
 
+    def test_listas_invalidas_sao_rejeitadas(self):
+        dados = {
+            "hourly": {
+                "precipitation_probability": None,
+                "precipitation": None,
+            }
+        }
+
+        with self.assertRaises(ValueError):
+            analisar_chuva(dados)
+
 
 if __name__ == "__main__":
     unittest.main()
