@@ -109,11 +109,13 @@ A irrigação do cafeeiro deve considerar a disponibilidade de água. Em um sist
 - A atividade permite que o grupo combine os fatores; a combinação escolhida deverá ser explicada no README.
 - Durante a demonstração, ao alterar N, P ou K, também deve ser alterado o LDR/pH conforme solicitado no enunciado.
 
-## Próxima decisão do grupo
+## Decisão adotada no projeto
 
-Com a pesquisa registrada, o próximo passo é preencher `docs/logica_irrigacao.md` e responder:
+A pesquisa foi convertida em uma regra funcional já documentada em `docs/logica_irrigacao.md` e implementada em `esp32/sketch.ino`:
 
-1. Quando exatamente a bomba deve ligar?
-2. Em quais situações ela deve permanecer desligada?
-3. Como pH e NPK entram na decisão sem confundir correção nutricional com irrigação?
-4. Como a previsão de chuva do opcional Python poderá cancelar uma irrigação?
+1. a bomba liga quando a umidade simulada está abaixo de 50% e não há chuva prevista;
+2. a bomba permanece desligada quando a umidade é igual ou superior a 50% ou quando há chuva prevista;
+3. pH e NPK geram alertas agronômicos, mas não acionam a bomba diretamente;
+4. o opcional Python fornece `CHUVA=SIM` ou `CHUVA=NAO` para o ESP32 via Monitor Serial.
+
+A próxima etapa é validar essa regra no Wokwi com os cenários de `docs/roteiro_testes.md`.
