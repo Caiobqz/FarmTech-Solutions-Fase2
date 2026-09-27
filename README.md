@@ -56,7 +56,7 @@ Essas substituições são exclusivamente para a simulação solicitada pela ati
 
 Os botões usam `INPUT_PULLUP`: pressionado corresponde a `LOW` no GPIO e é convertido pelo programa para “adequado”.
 
-O relé está configurado como ativo em nível alto no Wokwi.
+O código atualmente considera o relé ativo em nível alto (`HIGH`). Esse comportamento ainda deve ser confirmado durante os testes no Wokwi antes da entrega.
 
 ## 5. Conversão do LDR para pH
 
@@ -169,10 +169,10 @@ Relé
 
 ### Python
 
-Entre na pasta `python` e execute:
+Na raiz do repositório, execute:
 
 ```bash
-python clima_api.py --latitude LATITUDE --longitude LONGITUDE
+python python/clima_api.py --latitude LATITUDE --longitude LONGITUDE
 ```
 
 Substitua `LATITUDE` e `LONGITUDE` pelas coordenadas da área que será representada como fazenda.
@@ -198,6 +198,7 @@ FarmTech-Solutions-Fase2/
 │   ├── divisao_tarefas.md
 │   ├── logica_irrigacao.md
 │   ├── pesquisa_cafe.md
+│   ├── revisao_tecnica.md
 │   └── roteiro_testes.md
 ├── imagens/
 ├── r/
@@ -207,10 +208,12 @@ FarmTech-Solutions-Fase2/
 
 ## 11. Entregáveis da FIAP
 
-- [x] Circuito ESP32 planejado em `esp32/diagram.json`;
-- [x] Código C/C++ em `esp32/sketch.ino`;
+- [x] Circuito definido em `esp32/diagram.json`;
+- [x] Código C/C++ organizado em `esp32/sketch.ino`;
 - [x] Integração com API pública em `python/clima_api.py`;
 - [x] Documentação da lógica;
+- [ ] Compilar e validar o circuito completo no Wokwi;
+- [ ] Registrar os resultados em `docs/roteiro_testes.md`;
 - [ ] Captura real do circuito no Wokwi em `imagens/circuito-wokwi.png`;
 - [ ] Captura da irrigação ligada;
 - [ ] Captura da irrigação desligada;
