@@ -1,6 +1,6 @@
-# Planejamento das conexões no Wokwi
+# Conexões do circuito no Wokwi
 
-Este documento define uma proposta de pinos e a função de cada componente antes da montagem do circuito. A montagem deverá ser feita e conferida pelo grupo no Wokwi.
+Este documento registra os pinos definidos para o circuito em `esp32/diagram.json` e a função de cada componente. As conexões ainda devem ser validadas pelo grupo durante a simulação no Wokwi.
 
 ## Componentes obrigatórios
 
@@ -10,9 +10,9 @@ Este documento define uma proposta de pinos e a função de cada componente ante
 - 1 DHT22 para representar umidade do solo;
 - 1 módulo relé para representar a bomba d'água.
 
-## Distribuição sugerida de pinos
+## Distribuição de pinos utilizada
 
-| Componente | Função | Pino sugerido no ESP32 | Tipo |
+| Componente | Função | Pino no ESP32 | Tipo |
 |---|---|---:|---|
 | Botão N | estado do nitrogênio | GPIO 18 | digital |
 | Botão P | estado do fósforo | GPIO 19 | digital |
@@ -98,17 +98,16 @@ As conexões de alimentação dependem do componente selecionado no Wokwi. Duran
 - nunca definir a alimentação apenas pela aparência do componente;
 - usar a documentação/descrição do próprio Wokwi quando houver dúvida.
 
-## Ordem recomendada de montagem
+## Ordem recomendada de validação
 
-1. Adicionar o ESP32.
-2. Adicionar apenas o botão N e testar.
-3. Adicionar P e K e testar os três.
-4. Adicionar o LDR e observar a leitura analógica.
-5. Adicionar o DHT22 e conferir a leitura de umidade.
-6. Adicionar o relé e testar ON/OFF.
-7. Somente depois juntar toda a lógica de irrigação.
+O circuito completo já está descrito em `esp32/diagram.json`. Para encontrar erros com facilidade, validar cada parte nesta ordem:
 
-Essa ordem facilita encontrar erros de ligação.
+1. confirmar os três botões N, P e K;
+2. variar o LDR e observar o pH simulado;
+3. variar a umidade do DHT22;
+4. testar o relé ligado e desligado;
+5. testar `CHUVA=SIM`, `CHUVA=NAO` e `STATUS`;
+6. executar os cenários completos de `docs/roteiro_testes.md`.
 
 ## O que salvar no repositório
 
@@ -135,8 +134,8 @@ E em `imagens/`:
 - [ ] todos os componentes compartilham as referências de alimentação/GND necessárias;
 - [ ] Monitor Serial consegue mostrar as entradas;
 - [ ] relé responde ao comando do ESP32;
-- [ ] `diagram.json` foi salvo.
+- [x] `diagram.json` foi salvo.
 
 ## Próximo passo prático
 
-Depois de conferir este planejamento, abrir o Wokwi e montar **primeiro ESP32 + botão N**. Testar um componente por vez antes de montar o circuito inteiro.
+Abrir o circuito no Wokwi, confirmar que compila e executar a validação componente por componente. Não marcar os demais itens do checklist como concluídos até observar o comportamento real da simulação.
