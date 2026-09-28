@@ -66,13 +66,13 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 ## Validações que ainda precisam ser executadas no Wokwi
 
 - [x] circuito compila sem erro;
-- [ ] botão N altera o estado;
-- [ ] botão P altera o estado;
-- [ ] botão K altera o estado;
-- [ ] LDR modifica o pH simulado;
-- [ ] DHT22 modifica a umidade;
+- [x] botão N altera o estado;
+- [x] botão P altera o estado;
+- [x] botão K altera o estado;
+- [x] LDR modifica o pH simulado;
+- [x] DHT22 modifica a umidade;
 - [x] umidade < 50% e sem chuva liga o relé;
-- [ ] umidade >= 50% mantém o relé desligado;
+- [x] umidade >= 50% mantém o relé desligado;
 - [x] `CHUVA=SIM` impede irrigação com solo seco;
 - [ ] `CHUVA=NAO` permite irrigação com solo seco;
 - [ ] `STATUS` mostra a condição atual de chuva;
