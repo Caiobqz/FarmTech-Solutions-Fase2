@@ -198,3 +198,14 @@ Foi executado no Wokwi um cenário com:
 Resultado observado: o sistema exibiu alerta de pH fora da faixa e manteve **relé ON / bomba ligada** por causa da umidade abaixo de 50% e ausência de chuva prevista.
 
 Esse resultado confirma que pH inadequado gera alerta agronômico, mas não bloqueia a irrigação quando há necessidade hídrica. O Teste 3 formal ainda pode ser repetido com N, P e K em estado ADEQUADO para reproduzir exatamente o cenário definido no roteiro.
+
+
+### Comando STATUS
+
+O comando `STATUS` foi validado no Monitor Serial. Com a condição meteorológica atual configurada como sem chuva, o ESP32 respondeu:
+
+```text
+[STATUS] Chuva prevista = NAO
+```
+
+Resultado: **aprovado**.
