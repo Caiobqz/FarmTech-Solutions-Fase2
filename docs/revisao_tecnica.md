@@ -52,20 +52,31 @@ O código foi reorganizado sem alterar a regra de negócio:
 - latitude e longitude agora são validadas antes da consulta;
 - o comportamento em caso de falha da API permanece seguro: nenhum comando de chuva é gerado sem dado válido.
 
+### Serial Monitor no Wokwi
+
+Durante a validação real, o Serial Monitor só passou a exibir corretamente a saída após ligar explicitamente a UART do ESP32 ao monitor virtual no `diagram.json`:
+
+```text
+ESP32 TX -> Serial Monitor RX
+ESP32 RX -> Serial Monitor TX
+```
+
+O monitor também foi configurado com `display: "always"`. Essa configuração foi incorporada ao circuito versionado.
+
 ## Validações que ainda precisam ser executadas no Wokwi
 
-- [ ] circuito compila sem erro;
+- [x] circuito compila sem erro;
 - [ ] botão N altera o estado;
 - [ ] botão P altera o estado;
 - [ ] botão K altera o estado;
 - [ ] LDR modifica o pH simulado;
 - [ ] DHT22 modifica a umidade;
-- [ ] umidade < 50% e sem chuva liga o relé;
+- [x] umidade < 50% e sem chuva liga o relé;
 - [ ] umidade >= 50% mantém o relé desligado;
-- [ ] `CHUVA=SIM` impede irrigação com solo seco;
+- [x] `CHUVA=SIM` impede irrigação com solo seco;
 - [ ] `CHUVA=NAO` permite irrigação com solo seco;
 - [ ] `STATUS` mostra a condição atual de chuva;
-- [ ] alertas de NPK e pH aparecem corretamente.
+- [x] alertas de NPK e pH aparecem corretamente.
 
 ## Entregáveis ainda pendentes
 
