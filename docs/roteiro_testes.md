@@ -143,3 +143,19 @@ Antes de testar a lógica completa, validar separadamente:
 - [ ] imagens finais foram salvas em `imagens/`;
 - [ ] README está atualizado;
 - [ ] link do vídeo foi adicionado ao README.
+
+
+## Evidência real já obtida no Wokwi
+
+Validação parcial executada em 28/09/2026 com o circuito real do projeto:
+
+- compilação e inicialização do ESP32: **aprovadas**;
+- Monitor Serial: **aprovado**;
+- leitura do DHT22: **24,0 °C e 40,0%**;
+- leitura do LDR: **1123**, convertida para **pH 3,84**;
+- N, P e K soltos: **INADEQUADOS**;
+- alertas de N, P, K e pH: **aprovados**;
+- com umidade em 40% e chuva = NÃO: **relé ON / bomba ligada**;
+- após comando `CHUVA=SIM`, mantendo umidade em 40%: **relé OFF / bomba desligada**.
+
+Esses resultados comprovam a regra principal com solo seco e o bloqueio da irrigação por previsão de chuva. Os cenários numerados acima ainda devem ser executados nos valores exatos definidos para fechar a validação formal.
