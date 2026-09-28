@@ -184,3 +184,17 @@ Foi executado no Wokwi um cenário com:
 Resultado observado: **relé ON / bomba ligada**, com a mensagem de que a umidade estava abaixo de 50% e não havia chuva prevista.
 
 Esse resultado valida a regra hídrica com pH adequado, mas não encerra formalmente o Teste 2 porque os três nutrientes ainda não estavam simultaneamente em estado ADEQUADO.
+
+
+### Umidade baixa com pH inadequado — evidência parcial
+
+Foi executado no Wokwi um cenário com:
+
+- pH simulado: 4,81;
+- umidade: 34,5%;
+- chuva prevista: NÃO;
+- N, P e K: inadequados.
+
+Resultado observado: o sistema exibiu alerta de pH fora da faixa e manteve **relé ON / bomba ligada** por causa da umidade abaixo de 50% e ausência de chuva prevista.
+
+Esse resultado confirma que pH inadequado gera alerta agronômico, mas não bloqueia a irrigação quando há necessidade hídrica. O Teste 3 formal ainda pode ser repetido com N, P e K em estado ADEQUADO para reproduzir exatamente o cenário definido no roteiro.
