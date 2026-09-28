@@ -117,15 +117,15 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 
 Antes de testar a lógica completa, validar separadamente:
 
-- [ ] botão N muda de estado;
-- [ ] botão P muda de estado;
-- [ ] botão K muda de estado;
-- [ ] LDR apresenta valor analógico variável;
-- [ ] conversão do LDR altera o pH simulado;
-- [ ] DHT22 fornece valor de umidade;
-- [ ] relé pode ser ligado;
-- [ ] relé pode ser desligado;
-- [ ] Monitor Serial apresenta as leituras.
+- [x] botão N muda de estado;
+- [x] botão P muda de estado;
+- [x] botão K muda de estado;
+- [x] LDR apresenta valor analógico variável;
+- [x] conversão do LDR altera o pH simulado;
+- [x] DHT22 fornece valor de umidade;
+- [x] relé pode ser ligado;
+- [x] relé pode ser desligado;
+- [x] Monitor Serial apresenta as leituras.
 
 ## Checklist antes do vídeo
 
@@ -159,3 +159,14 @@ Validação parcial executada em 28/09/2026 com o circuito real do projeto:
 - após comando `CHUVA=SIM`, mantendo umidade em 40%: **relé OFF / bomba desligada**.
 
 Esses resultados comprovam a regra principal com solo seco e o bloqueio da irrigação por previsão de chuva. Os cenários numerados acima ainda devem ser executados nos valores exatos definidos para fechar a validação formal.
+
+
+### Validação dos botões NPK
+
+Os três botões foram validados individualmente no Wokwi com `INPUT_PULLUP`:
+
+- N pressionado: passou de INADEQUADO para ADEQUADO;
+- P pressionado: passou de INADEQUADO para ADEQUADO;
+- K pressionado: passou de INADEQUADO para ADEQUADO.
+
+A bomba permaneceu desligada durante esses testes porque a umidade estava em aproximadamente 70,5%, confirmando que os alertas de nutrientes não acionam irrigação por si só.
