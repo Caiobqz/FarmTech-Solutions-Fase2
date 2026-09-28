@@ -12,6 +12,8 @@
     { "type": "wokwi-relay-module", "id": "relay", "top": 300, "left": 470, "attrs": { "transistor": "npn" } }
   ],
   "connections": [
+    [ "esp32:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX", "$serialMonitor:TX", "", [] ],
     [ "esp32:18", "buttonN:1.r", "green", [] ],
     [ "buttonN:2.r", "esp32:GND.1", "black", [] ],
     [ "esp32:19", "buttonP:1.r", "green", [] ],
@@ -28,5 +30,5 @@
     [ "esp32:5V", "relay:VCC", "red", [] ],
     [ "esp32:GND.2", "relay:GND", "black", [] ]
   ],
-  "serialMonitor": { "display": "auto", "newline": "lf", "convertEol": true }
+  "serialMonitor": { "display": "always", "newline": "lf", "convertEol": true }
 }
