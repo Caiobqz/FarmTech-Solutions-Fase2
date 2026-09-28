@@ -214,6 +214,7 @@ void imprimirCabecalho() {
 
 void setup() {
   Serial.begin(115200);
+  delay(200);
 
   pinMode(PIN_N, INPUT_PULLUP);
   pinMode(PIN_P, INPUT_PULLUP);
@@ -225,6 +226,9 @@ void setup() {
   dht.setup(PIN_DHT, DHTesp::DHT22);
 
   imprimirCabecalho();
+
+  // Permite a primeira leitura imediatamente após iniciar a simulação.
+  ultimaLeitura = millis() - INTERVALO_LEITURA_MS;
 }
 
 void loop() {
