@@ -170,3 +170,17 @@ Os três botões foram validados individualmente no Wokwi com `INPUT_PULLUP`:
 - K pressionado: passou de INADEQUADO para ADEQUADO.
 
 A bomba permaneceu desligada durante esses testes porque a umidade estava em aproximadamente 70,5%, confirmando que os alertas de nutrientes não acionam irrigação por si só.
+
+
+### Umidade baixa com pH adequado — evidência parcial
+
+Foi executado no Wokwi um cenário com:
+
+- pH simulado: 5,98;
+- umidade: 34,5%;
+- chuva prevista: NÃO;
+- N, P e K: inadequados.
+
+Resultado observado: **relé ON / bomba ligada**, com a mensagem de que a umidade estava abaixo de 50% e não havia chuva prevista.
+
+Esse resultado valida a regra hídrica com pH adequado, mas não encerra formalmente o Teste 2 porque os três nutrientes ainda não estavam simultaneamente em estado ADEQUADO.
