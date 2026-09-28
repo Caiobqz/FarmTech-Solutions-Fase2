@@ -75,7 +75,7 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 - [x] umidade >= 50% mantém o relé desligado;
 - [x] `CHUVA=SIM` impede irrigação com solo seco;
 - [ ] `CHUVA=NAO` permite irrigação com solo seco;
-- [ ] `STATUS` mostra a condição atual de chuva;
+- [x] `STATUS` mostra a condição atual de chuva;
 - [x] alertas de NPK e pH aparecem corretamente.
 
 ## Entregáveis ainda pendentes
