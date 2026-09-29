@@ -56,7 +56,7 @@ Essas substituições são exclusivamente para a simulação solicitada pela ati
 
 Os botões usam `INPUT_PULLUP`: pressionado corresponde a `LOW` no GPIO e é convertido pelo programa para “adequado”.
 
-O código atualmente considera o relé ativo em nível alto (`HIGH`). Esse comportamento ainda deve ser confirmado durante os testes no Wokwi antes da entrega.
+O relé foi validado no Wokwi com acionamento em nível alto (`HIGH`), apresentando mudança visual coerente entre os estados ligado e desligado.
 
 ## 5. Conversão do LDR para pH
 
