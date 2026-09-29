@@ -16,8 +16,8 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 - Chuva prevista: não
 - Resultado esperado: **relé OFF**
 - Alertas esperados: nenhum
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: foi validado um cenário real com umidade em aproximadamente 70,5%, pH em 5,98, chuva = NÃO e relé OFF. N, P e K estavam inadequados, portanto o cenário exato acima não foi reproduzido.
+- Status: **regra hídrica validada; cenário exato não reproduzido**.
 
 ## Teste 2 — Umidade baixa
 
@@ -31,8 +31,8 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 - Chuva prevista: não
 - Resultado esperado: **relé ON**
 - Alertas esperados: nenhum
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: umidade em 34,5%, pH em 5,98, chuva = NÃO e relé ON. N, P e K estavam inadequados.
+- Status: **regra de acionamento por baixa umidade validada; cenário exato não reproduzido**.
 
 ## Teste 3 — Umidade baixa com pH inadequado
 
@@ -46,8 +46,8 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 - Chuva prevista: não
 - Resultado esperado: **relé ON**
 - Alerta esperado: pH fora da faixa
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: umidade em 34,5%, pH em 4,81, chuva = NÃO, alerta de pH exibido e relé ON. N, P e K estavam inadequados.
+- Status: **separação entre alerta de pH e decisão hídrica validada; cenário exato não reproduzido**.
 
 ## Teste 4 — Umidade baixa com nutriente inadequado
 
@@ -61,21 +61,21 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 - Chuva prevista: não
 - Resultado esperado: **relé ON**
 - Alerta esperado: nitrogênio inadequado
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: os botões N, P e K foram validados individualmente; com umidade baixa a bomba permaneceu ligada independentemente dos alertas nutricionais. A combinação exata N inadequado + P/K adequados não foi mantida simultaneamente.
+- Status: **comportamento funcional validado; cenário exato não reproduzido**.
 
 ## Teste 5 — Alteração de NPK acompanhada de pH
 
 **Objetivo:** demonstrar a exigência do enunciado de modificar também o LDR quando os estados de NPK forem alterados.
 
-- Estado inicial dos botões:
-- Botão alterado:
-- Estado final:
-- pH antes:
-- pH depois:
-- Resultado esperado:
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Estado inicial dos botões: N, P e K inadequados;
+- Botão alterado: N;
+- Estado final observado: N adequado durante o acionamento; P e K inadequados;
+- pH antes: 3,84;
+- pH depois: 5,87;
+- Resultado esperado: demonstrar alteração de NPK acompanhada por alteração do LDR/pH;
+- Resultado obtido: alteração demonstrada no Wokwi e registrada no Monitor Serial;
+- Passou? [x] Sim [ ] Não
 
 ## Teste 6 — Umidade alta com várias condições inadequadas
 
@@ -89,8 +89,8 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 - Chuva prevista: não
 - Resultado esperado: **relé OFF**
 - Alertas esperados: N, P, K e pH
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: com umidade em aproximadamente 70,5%, N/P/K inadequados, pH em 5,98 e chuva = NÃO, o relé permaneceu OFF e os alertas nutricionais foram exibidos. O pH não estava fora da faixa nesse ensaio.
+- Status: **bloqueio da irrigação por umidade suficiente validado; cenário exato não reproduzido**.
 
 ## Teste 7 — Previsão de chuva (opcional Python)
 
@@ -107,13 +107,9 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 
 **Objetivo:** verificar se os dados coletados podem gerar informação estatística útil.
 
-- Arquivo utilizado:
-- Quantidade de leituras:
-- Média de umidade:
-- Desvio padrão:
-- Outras estatísticas:
-- Interpretação:
-- Passou? [ ] Sim [ ] Não
+- Status: **não realizado**;
+- Motivo: etapa opcional não priorizada para esta entrega;
+- Observação: a entrega obrigatória e o opcional Python foram priorizados.
 
 ## Testes individuais dos componentes
 
