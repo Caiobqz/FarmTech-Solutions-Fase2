@@ -94,3 +94,8 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 ## Prioridade
 
 Nenhuma nova funcionalidade deve ser adicionada antes de validar o circuito atual. A próxima etapa é **teste funcional no Wokwi**.
+
+
+### Confirmação visual do relé
+
+A mudança visual do módulo de relé foi confirmada no Wokwi e acompanhou corretamente os estados ON/OFF informados pelo Monitor Serial.
