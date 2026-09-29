@@ -233,7 +233,7 @@ FarmTech-Solutions-Fase2/
 - [x] Documentação da lógica;
 - [x] Compilar e validar o circuito completo no Wokwi;
 - [x] Registrar os resultados em `docs/roteiro_testes.md`;
-- [x] Captura real do circuito no Wokwi em `imagens/circuito-wokwi.png`;
+- [ ] Captura real do circuito no Wokwi em `imagens/circuito-wokwi.png`;
 - [ ] Captura da irrigação ligada em `imagens/irrigacao-ligada.png`;
 - [ ] Captura da irrigação desligada em `imagens/irrigacao-desligada.png`;
 - [ ] Link do vídeo de até 5 minutos no YouTube;
@@ -241,7 +241,7 @@ FarmTech-Solutions-Fase2/
 
 ## Evidências visuais
 
-O print do circuito já está versionado. Os dois prints de irrigação abaixo já estão referenciados no README e aparecerão automaticamente após o envio manual para a pasta `imagens/` com os nomes definidos.
+As três capturas abaixo já estão referenciadas no README e aparecerão automaticamente após o envio manual para a pasta `imagens/` com os nomes definidos.
 
 ### Circuito completo no Wokwi
 
@@ -280,4 +280,4 @@ https://www.youtube.com/watch?v=SEU_VIDEO
 
 ## 14. Estado atual da entrega
 
-A validacao funcional do circuito foi concluida no Wokwi. Foram validados N, P, K, LDR/pH, DHT22, rele ON/OFF, CHUVA=SIM, CHUVA=NAO, STATUS e a integracao Python/Open-Meteo. O opcional em R nao foi implementado. Permanece pendente o envio manual de `imagens/irrigacao-ligada.png` e `imagens/irrigacao-desligada.png`, além do vídeo de até 5 minutos, do link do vídeo e da revisão final antes da entrega.
+A validacao funcional do circuito foi concluida no Wokwi. Foram validados N, P, K, LDR/pH, DHT22, rele ON/OFF, CHUVA=SIM, CHUVA=NAO, STATUS e a integracao Python/Open-Meteo. O opcional em R nao foi implementado. Permanece pendente o envio manual de `imagens/circuito-wokwi.png`, `imagens/irrigacao-ligada.png` e `imagens/irrigacao-desligada.png`, além do vídeo de até 5 minutos, do link do vídeo e da revisão final antes da entrega.
