@@ -81,10 +81,10 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 ## Entregáveis ainda pendentes
 
 - [x] registrar evidências reais em `docs/roteiro_testes.md`;
-- [ ] adicionar `imagens/circuito-wokwi.png`;
+- [x] adicionar `imagens/circuito-wokwi.png`;
 - [ ] adicionar `imagens/irrigacao-ligada.png`;
 - [ ] adicionar `imagens/irrigacao-desligada.png`;
-- [ ] inserir as imagens no README principal;
+- [x] inserir as referências das imagens no README principal;
 - [x] opcional em R não priorizado para esta entrega;
 - [ ] gravar vídeo de até 5 minutos;
 - [ ] publicar o vídeo como não listado;
@@ -93,7 +93,7 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 
 ## Prioridade
 
-A validação funcional principal está concluída. A prioridade agora é **versionar as imagens finais, inserir as evidências no README, gravar/publicar o vídeo e realizar a revisão final antes da entrega**.
+A validação funcional principal está concluída. A prioridade agora é **enviar manualmente as duas capturas restantes de irrigação, gravar/publicar o vídeo, adicionar o link ao README e realizar a revisão final antes da entrega**.
 
 
 ### Confirmação visual do relé
