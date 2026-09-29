@@ -2,6 +2,8 @@
 
 Este documento será usado para validar o projeto antes da gravação do vídeo. Cada cenário deve ser executado no Wokwi e o resultado real deve ser comparado com o resultado esperado.
 
+> Observação sobre os cenários numerados: os valores definidos abaixo servem como roteiro de referência. As evidências registradas ao final do documento correspondem aos valores realmente observados no Wokwi. Quando um cenário não foi reproduzido exatamente (por exemplo, N/P/K simultaneamente adequados), ele não deve ser tratado como execução exata, mesmo que a regra funcional correspondente tenha sido validada.
+
 ## Teste 1 — Solo simulado com umidade suficiente
 
 **Objetivo:** confirmar que a bomba permanece desligada quando não há necessidade de irrigação.
@@ -96,10 +98,10 @@ Este documento será usado para validar o projeto antes da gravação do vídeo.
 
 - Umidade: 35%
 - Chuva prevista pela API: sim
-- Forma de transferência para ESP32: [ ] manual [ ] Monitor Serial
+- Forma de transferência para ESP32: [x] manual via Monitor Serial
 - Resultado esperado: **relé OFF por previsão de chuva**
-- Resultado obtido:
-- Passou? [ ] Sim [ ] Não
+- Resultado obtido: com umidade baixa e `CHUVA=SIM`, o relé permaneceu OFF e o Monitor Serial informou que havia chuva prevista.
+- Passou? [x] Sim [ ] Não
 
 ## Teste 8 — Análise em R (opcional)
 
@@ -129,19 +131,19 @@ Antes de testar a lógica completa, validar separadamente:
 
 ## Checklist antes do vídeo
 
-- [ ] todos os componentes aparecem no circuito;
-- [ ] nomes/funções dos componentes podem ser explicados pelo grupo;
-- [ ] Monitor Serial mostra as leituras;
+- [x] todos os componentes aparecem no circuito;
+- [x] nomes/funções dos componentes podem ser explicados pelo grupo;
+- [x] Monitor Serial mostra as leituras;
 - [x] relé liga e desliga nos cenários definidos;
 - [x] alteração de NPK é demonstrável;
 - [x] LDR é alterado junto com NPK durante a demonstração;
-- [ ] DHT22 pode ser ajustado durante o teste;
+- [x] DHT22 pode ser ajustado durante o teste;
 - [x] cenário de umidade baixa foi validado;
 - [x] cenário de umidade suficiente foi validado;
-- [ ] opcional Python funciona, se for apresentado;
+- [x] opcional Python funciona, se for apresentado;
 - [ ] opcional R funciona, se for apresentado;
 - [ ] imagens finais foram salvas em `imagens/`;
-- [ ] README está atualizado;
+- [x] README está atualizado;
 - [ ] link do vídeo foi adicionado ao README.
 
 

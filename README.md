@@ -142,6 +142,24 @@ Regra de irrigação
 Relé
 ```
 
+## Estado atual da validação
+
+O circuito foi compilado e testado no Wokwi. Foram confirmados:
+
+- leitura dos botões N, P e K;
+- variação do LDR e conversão para pH simulado;
+- ajuste da umidade pelo DHT22;
+- relé ligado com umidade abaixo de 50% e sem chuva;
+- relé desligado com umidade suficiente;
+- bloqueio da irrigação com `CHUVA=SIM`;
+- retorno da irrigação com `CHUVA=NAO`;
+- comando `STATUS`;
+- mudança visual do módulo de relé;
+- demonstração de alteração de NPK acompanhada de alteração do LDR/pH;
+- consulta meteorológica em Python com a Open-Meteo.
+
+O opcional em R não foi implementado e não é necessário para a entrega obrigatória.
+
 ## 8. Testes recomendados
 
 | Cenário | Umidade | Chuva | Resultado |
@@ -219,7 +237,7 @@ FarmTech-Solutions-Fase2/
 - [ ] Captura da irrigação ligada;
 - [ ] Captura da irrigação desligada;
 - [ ] Link do vídeo de até 5 minutos no YouTube;
-- [ ] Revisão final e commits individuais do grupo.
+- [ ] Revisão final e conferência dos commits individuais do grupo.
 
 ## 12. Referências
 

@@ -63,7 +63,7 @@ ESP32 RX -> Serial Monitor TX
 
 O monitor também foi configurado com `display: "always"`. Essa configuração foi incorporada ao circuito versionado.
 
-## Validações que ainda precisam ser executadas no Wokwi
+## Validações funcionais concluídas no Wokwi
 
 - [x] circuito compila sem erro;
 - [x] botão N altera o estado;
@@ -80,12 +80,12 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 
 ## Entregáveis ainda pendentes
 
-- [ ] preencher resultados reais em `docs/roteiro_testes.md`;
+- [x] registrar evidências reais em `docs/roteiro_testes.md`;
 - [ ] adicionar `imagens/circuito-wokwi.png`;
 - [ ] adicionar `imagens/irrigacao-ligada.png`;
 - [ ] adicionar `imagens/irrigacao-desligada.png`;
 - [ ] inserir as imagens no README principal;
-- [ ] decidir se o grupo fará o opcional em R;
+- [x] opcional em R não priorizado para esta entrega;
 - [ ] gravar vídeo de até 5 minutos;
 - [ ] publicar o vídeo como não listado;
 - [ ] adicionar o link do vídeo ao README;
@@ -93,7 +93,7 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 
 ## Prioridade
 
-Nenhuma nova funcionalidade deve ser adicionada antes de validar o circuito atual. A próxima etapa é **teste funcional no Wokwi**.
+A validação funcional principal está concluída. A prioridade agora é **versionar as imagens finais, inserir as evidências no README, gravar/publicar o vídeo e realizar a revisão final antes da entrega**.
 
 
 ### Confirmação visual do relé
@@ -104,3 +104,10 @@ A mudança visual do módulo de relé foi confirmada no Wokwi e acompanhou corre
 ### NPK + alteração do LDR/pH
 
 A demonstração exigida no enunciado foi validada: o LDR foi alterado até pH 5,87 e o botão N foi acionado, aparecendo como ADEQUADO no Monitor Serial. A mudança de NPK e a mudança do pH foram demonstradas na mesma sequência de teste.
+
+
+### Validação do opcional Python
+
+O script `python/clima_api.py` foi executado com consulta real à Open-Meteo e gerou o comando meteorológico esperado para transferência ao Monitor Serial. O bloqueio com `CHUVA=SIM` e a liberação com `CHUVA=NAO` também foram confirmados no Wokwi.
+
+Resultado: **aprovado**.
