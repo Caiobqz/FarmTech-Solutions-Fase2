@@ -133,11 +133,11 @@ Antes de testar a lógica completa, validar separadamente:
 - [ ] nomes/funções dos componentes podem ser explicados pelo grupo;
 - [ ] Monitor Serial mostra as leituras;
 - [x] relé liga e desliga nos cenários definidos;
-- [ ] alteração de NPK é demonstrável;
-- [ ] LDR é alterado junto com NPK durante a demonstração;
+- [x] alteração de NPK é demonstrável;
+- [x] LDR é alterado junto com NPK durante a demonstração;
 - [ ] DHT22 pode ser ajustado durante o teste;
-- [ ] cenário de umidade baixa foi validado;
-- [ ] cenário de umidade suficiente foi validado;
+- [x] cenário de umidade baixa foi validado;
+- [x] cenário de umidade suficiente foi validado;
 - [ ] opcional Python funciona, se for apresentado;
 - [ ] opcional R funciona, se for apresentado;
 - [ ] imagens finais foram salvas em `imagens/`;
@@ -214,5 +214,18 @@ Resultado: **aprovado**.
 ### Validação visual do relé
 
 Foi confirmada no Wokwi a mudança visual do módulo de relé ao alternar a condição meteorológica entre `CHUVA=SIM` e `CHUVA=NAO`. A alteração visual acompanhou os estados exibidos no Monitor Serial (`RELE: OFF` e `RELE: ON`).
+
+Resultado: **aprovado**.
+
+
+### Teste 5 — demonstração final validada
+
+A exigência de alterar NPK e também modificar o LDR/pH durante a demonstração foi validada no Wokwi.
+
+Evidência observada:
+- estado inicial recorrente: N inadequado e pH 3,84;
+- o LDR foi alterado até o pH chegar a 5,87;
+- em seguida, o botão N foi acionado e o Monitor Serial registrou N = ADEQUADO mantendo o pH em 5,87;
+- a bomba permaneceu ligada porque a umidade estava em 40% e não havia chuva prevista.
 
 Resultado: **aprovado**.
