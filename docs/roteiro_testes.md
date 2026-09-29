@@ -138,7 +138,7 @@ Antes de testar a lógica completa, validar separadamente:
 - [x] cenário de umidade suficiente foi validado;
 - [x] opcional Python funciona, se for apresentado;
 - [ ] opcional R não realizado;
-- [ ] imagens finais foram salvas em `imagens/`;
+- [x] imagens finais foram salvas em `imagens/`;
 - [x] README está atualizado;
 - [ ] link do vídeo foi adicionado ao README.
 
