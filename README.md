@@ -276,3 +276,8 @@ Adicionar aqui o link do vídeo não listado após a gravação:
 ```text
 https://www.youtube.com/watch?v=SEU_VIDEO
 ```
+
+
+## 14. Estado atual da entrega
+
+A validacao funcional do circuito foi concluida no Wokwi. Foram validados N, P, K, LDR/pH, DHT22, rele ON/OFF, CHUVA=SIM, CHUVA=NAO, STATUS e a integracao Python/Open-Meteo. O opcional em R nao foi implementado. Permanecem pendentes as imagens finais no repositorio, o video de ate 5 minutos, o link do video e a revisao final antes da entrega.
