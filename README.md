@@ -213,8 +213,8 @@ FarmTech-Solutions-Fase2/
 - [x] Código C/C++ organizado em `esp32/sketch.ino`;
 - [x] Integração com API pública em `python/clima_api.py`;
 - [x] Documentação da lógica;
-- [ ] Compilar e validar o circuito completo no Wokwi;
-- [ ] Registrar os resultados em `docs/roteiro_testes.md`;
+- [x] Compilar e validar o circuito completo no Wokwi;
+- [x] Registrar os resultados em `docs/roteiro_testes.md`;
 - [ ] Captura real do circuito no Wokwi em `imagens/circuito-wokwi.png`;
 - [ ] Captura da irrigação ligada;
 - [ ] Captura da irrigação desligada;
