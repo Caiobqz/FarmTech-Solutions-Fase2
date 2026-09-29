@@ -74,7 +74,7 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 - [x] umidade < 50% e sem chuva liga o relé;
 - [x] umidade >= 50% mantém o relé desligado;
 - [x] `CHUVA=SIM` impede irrigação com solo seco;
-- [ ] `CHUVA=NAO` permite irrigação com solo seco;
+- [x] `CHUVA=NAO` permite irrigação com solo seco;
 - [x] `STATUS` mostra a condição atual de chuva;
 - [x] alertas de NPK e pH aparecem corretamente.
 
@@ -99,3 +99,8 @@ Nenhuma nova funcionalidade deve ser adicionada antes de validar o circuito atua
 ### Confirmação visual do relé
 
 A mudança visual do módulo de relé foi confirmada no Wokwi e acompanhou corretamente os estados ON/OFF informados pelo Monitor Serial.
+
+
+### NPK + alteração do LDR/pH
+
+A demonstração exigida no enunciado foi validada: o LDR foi alterado até pH 5,87 e o botão N foi acionado, aparecendo como ADEQUADO no Monitor Serial. A mudança de NPK e a mudança do pH foram demonstradas na mesma sequência de teste.
