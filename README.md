@@ -239,6 +239,26 @@ FarmTech-Solutions-Fase2/
 - [ ] Link do vídeo de até 5 minutos no YouTube;
 - [ ] Revisão final e conferência dos commits individuais do grupo.
 
+## Evidências visuais
+
+As capturas finais foram definidas com os seguintes nomes. Assim que os arquivos forem enviados para a pasta `imagens/`, elas aparecerão automaticamente abaixo.
+
+### Circuito completo no Wokwi
+
+![Circuito completo no Wokwi](imagens/circuito-wokwi.png)
+
+### Irrigação ligada
+
+Cenário de referência: umidade em aproximadamente 35%, sem chuva prevista e relé ligado.
+
+![Irrigação ligada](imagens/irrigacao-ligada.png)
+
+### Irrigação desligada por previsão de chuva
+
+Cenário de referência: umidade em aproximadamente 35%, `CHUVA=SIM` e relé desligado.
+
+![Irrigação desligada](imagens/irrigacao-desligada.png)
+
 ## 12. Referências
 
 - Embrapa Ater+ Digital — Manejo Hídrico do Café: https://www.atermaisdigital.cnptia.embrapa.br/web/cafe/fase-de-producao-ou-manutencao
