@@ -132,7 +132,7 @@ Antes de testar a lógica completa, validar separadamente:
 - [ ] todos os componentes aparecem no circuito;
 - [ ] nomes/funções dos componentes podem ser explicados pelo grupo;
 - [ ] Monitor Serial mostra as leituras;
-- [ ] relé liga e desliga nos cenários definidos;
+- [x] relé liga e desliga nos cenários definidos;
 - [ ] alteração de NPK é demonstrável;
 - [ ] LDR é alterado junto com NPK durante a demonstração;
 - [ ] DHT22 pode ser ajustado durante o teste;
@@ -207,5 +207,12 @@ O comando `STATUS` foi validado no Monitor Serial. Com a condição meteorológi
 ```text
 [STATUS] Chuva prevista = NAO
 ```
+
+Resultado: **aprovado**.
+
+
+### Validação visual do relé
+
+Foi confirmada no Wokwi a mudança visual do módulo de relé ao alternar a condição meteorológica entre `CHUVA=SIM` e `CHUVA=NAO`. A alteração visual acompanhou os estados exibidos no Monitor Serial (`RELE: OFF` e `RELE: ON`).
 
 Resultado: **aprovado**.
