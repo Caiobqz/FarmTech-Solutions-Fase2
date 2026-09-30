@@ -31,6 +31,11 @@ Esta divisão serve para organizar o trabalho e pode ser alterada pelo grupo con
 - apoiar o opcional em R;
 - documentar como os opcionais se conectam à irrigação.
 
+## Cleidimar — rm576009
+
+- integrante atual do grupo;
+- responsabilidades específicas a definir pelo grupo.
+
 ## Responsabilidade de todos
 
 - compreender a lógica completa do projeto;
