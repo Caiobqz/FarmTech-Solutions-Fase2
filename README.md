@@ -8,6 +8,7 @@ Projeto acadêmico da FIAP para simulação de um sistema de irrigação intelig
 - Paulo Vitor Isidoro Silva — `rm575580@fiap.com.br`
 - Kauê Cavalcanti Araujo — `rm576394@fiap.com.br`
 - Juliana — `rm579614@fiap.com.br`
+- Cleidimar — `rm576009@fiap.com.br`
 
 ## 1. Objetivo
 
