@@ -73,6 +73,6 @@ O `sketch.ino` foi dividido em funções pequenas e com responsabilidade única:
 
 As leituras são agrupadas em `LeiturasSensores`, evitando muitas variáveis soltas no `loop()`.
 
-## Próxima etapa
+## Estado atual
 
-A implementação está pronta para validação no Wokwi. Ainda é necessário confirmar compilação, comportamento do relé e todos os cenários de `docs/roteiro_testes.md` antes da gravação do vídeo.
+A implementação foi compilada e validada no Wokwi. O comportamento do relé, os sensores simulados, os comandos do Monitor Serial e os cenários funcionais estão registrados em `docs/roteiro_testes.md`.
