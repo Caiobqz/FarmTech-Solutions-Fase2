@@ -28,13 +28,13 @@ Esta divisão serve para organizar o trabalho e pode ser alterada pelo grupo con
 
 - desenvolver o opcional de Python/API junto com o grupo;
 - ajudar a preparar os dados para análise;
-- apoiar o opcional em R;
+- apoiar os opcionais e a integração com a irrigação;
 - documentar como os opcionais se conectam à irrigação.
 
 ## Cleidimar — rm576009
 
 - integrante atual do grupo;
-- responsabilidades específicas a definir pelo grupo.
+- atribuição individual específica não registrada neste documento.
 
 ## Responsabilidade de todos
 
