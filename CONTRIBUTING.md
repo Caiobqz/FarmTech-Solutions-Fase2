@@ -27,7 +27,8 @@ A divisão abaixo é apenas uma sugestão e pode ser ajustada pelo grupo:
 - Caio: organização, integração e apoio no ESP32;
 - Juliana: pesquisa da cultura e documentação;
 - Paulo: circuito Wokwi e sensores;
-- Kauê: Python/API e apoio na análise em R.
+- Kauê: Python/API e apoio à análise;
+- Cleidimar: integrante atual do grupo; atribuição individual não registrada neste documento.
 
 Todos devem compreender o funcionamento geral do projeto antes da entrega.
 
