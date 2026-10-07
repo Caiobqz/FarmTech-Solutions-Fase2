@@ -140,7 +140,7 @@ Antes de testar a lógica completa, validar separadamente:
 - [ ] opcional R não realizado;
 - [x] imagens finais foram salvas em `imagens/`;
 - [x] README está atualizado;
-- [ ] link do vídeo foi adicionado ao README.
+- [x] link do vídeo foi adicionado ao README.
 
 
 ## Evidência real já obtida no Wokwi
