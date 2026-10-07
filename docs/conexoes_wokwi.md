@@ -1,6 +1,6 @@
 # Conexões do circuito no Wokwi
 
-Este documento registra os pinos definidos para o circuito em `esp32/diagram.json` e a função de cada componente. As conexões ainda devem ser validadas pelo grupo durante a simulação no Wokwi.
+Este documento registra os pinos definidos para o circuito em `esp32/diagram.json` e a função de cada componente. As conexões foram validadas durante a simulação no Wokwi.
 
 ## Componentes obrigatórios
 
@@ -124,18 +124,18 @@ E em `imagens/`:
 
 ## Checklist de montagem
 
-- [ ] ESP32 adicionado;
-- [ ] botão N conectado e testado;
-- [ ] botão P conectado e testado;
-- [ ] botão K conectado e testado;
-- [ ] LDR conectado ao pino analógico;
-- [ ] DHT22 conectado;
-- [ ] relé conectado;
-- [ ] todos os componentes compartilham as referências de alimentação/GND necessárias;
-- [ ] Monitor Serial consegue mostrar as entradas;
-- [ ] relé responde ao comando do ESP32;
+- [x] ESP32 adicionado;
+- [x] botão N conectado e testado;
+- [x] botão P conectado e testado;
+- [x] botão K conectado e testado;
+- [x] LDR conectado ao pino analógico;
+- [x] DHT22 conectado;
+- [x] relé conectado;
+- [x] todos os componentes compartilham as referências de alimentação/GND necessárias;
+- [x] Monitor Serial consegue mostrar as entradas;
+- [x] relé responde ao comando do ESP32;
 - [x] `diagram.json` foi salvo.
 
-## Próximo passo prático
+## Estado da validação
 
-Abrir o circuito no Wokwi, confirmar que compila e executar a validação componente por componente. Não marcar os demais itens do checklist como concluídos até observar o comportamento real da simulação.
+O circuito foi compilado e validado no Wokwi. Os resultados observados estão documentados em `docs/roteiro_testes.md` e `docs/revisao_tecnica.md`.
