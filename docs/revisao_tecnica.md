@@ -86,14 +86,14 @@ O monitor também foi configurado com `display: "always"`. Essa configuração f
 - [x] adicionar `imagens/irrigacao-desligada.png`;
 - [x] inserir as referências das imagens no README principal;
 - [x] opcional em R não priorizado para esta entrega;
-- [ ] gravar vídeo de até 5 minutos;
-- [ ] publicar o vídeo como não listado;
-- [ ] adicionar o link do vídeo ao README;
+- [x] gravar vídeo de até 5 minutos;
+- [x] publicar o vídeo como não listado;
+- [x] adicionar o link do vídeo ao README;
 - [ ] revisão final antes da entrega.
 
 ## Prioridade
 
-A validação funcional e as evidências visuais estão concluídas. A prioridade agora é **gravar/publicar o vídeo, adicionar o link ao README e realizar a revisão final antes da entrega**.
+A validação funcional, as evidências visuais e o vídeo estão concluídos. A prioridade agora é **realizar a revisão final antes da entrega**.
 
 
 ### Confirmação visual do relé
